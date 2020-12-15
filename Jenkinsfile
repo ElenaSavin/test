@@ -11,6 +11,6 @@ node {
   }
   
   stage 'Deploy on ECS'
-  sh 'aws ecs update-service --region us-east-1 --cluster first-jenkins --service first_task_fargate --force-new-deployment'
+  sh 'aws ecs update-service --region us-east-1 --cluster first-jenkins --service with-lb --force-new-deployment'
 }
 
