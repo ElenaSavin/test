@@ -10,7 +10,7 @@ node {
     docker.image('cool_flask_first_app').push('latest')
   }
   
-  stage 'Deploy on ECR'
+  stage 'Deploy on ECS'
   sh 'aws ecs update-service --region us-east-1 --cluster first-jenkins --service first_task_fargate --force-new-deployment'
 }
 
